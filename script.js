@@ -35,8 +35,7 @@ function startFlow(version) {
     document.getElementById('s1-text').innerText = data.s1Text;
     document.getElementById('s2-title').innerText = data.s2Title;
     document.getElementById('s2-text').innerText = data.s2Text;
-    document.getElementById('s3-title').innerText = data.s3Title;
-    document.getElementById('s3-text').innerText = data.s3Text;
+    // s3 is now a static meme layout, so no text injection needed for it.
 
     // Transition to step 1
     document.getElementById('step-0').classList.add('hidden');
