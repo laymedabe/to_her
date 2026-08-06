@@ -68,13 +68,38 @@ function sayYes() {
     
     setTimeout(() => {
         step3.style.opacity = '1';
-        step3.style.transform = 'scale(1)';
+        step3.style.transform = 'scale(1.1)';
+        step3.classList.add('celebration-card');
     }, 10);
 
-    // Burst a lot of hearts
-    for(let i=0; i<30; i++) {
-        setTimeout(createHeart, i * 100);
+    // Massive Confetti Explosion
+    const emojis = ['🎉', '💖', '✨', '🥂', '🥳', '💘', '💍'];
+    for(let i=0; i<100; i++) {
+        setTimeout(() => {
+            const el = document.createElement('div');
+            el.classList.add('confetti');
+            el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            // Random explosion directions
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = 150 + Math.random() * 800; // explosion distance
+            const tx = Math.cos(angle) * velocity + 'px';
+            const ty = Math.sin(angle) * velocity + 'px';
+            const rot = Math.random() * 720 + 'deg';
+            
+            el.style.setProperty('--tx', `calc(-50% + ${tx})`);
+            el.style.setProperty('--ty', `calc(-50% + ${ty})`);
+            el.style.setProperty('--rot', rot);
+            
+            document.body.appendChild(el);
+            
+            // cleanup
+            setTimeout(() => el.remove(), 2500);
+        }, i * 20); // staggered burst
     }
+    
+    // Speed up the background floating hearts drastically
+    setInterval(createHeart, 150);
 }
 
 // Dodging "No" Button Logic

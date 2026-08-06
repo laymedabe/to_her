@@ -189,3 +189,35 @@ p {
     40% { transform: translateY(-30px); }
     60% { transform: translateY(-15px); }
 }
+
+/* Celebration Enhancements */
+.celebration-card {
+    box-shadow: 0 0 100px var(--primary-pink);
+    border: 2px solid var(--white);
+    animation: glow-pulse 2s infinite;
+}
+
+@keyframes glow-pulse {
+    0% { box-shadow: 0 0 50px var(--primary-pink); }
+    50% { box-shadow: 0 0 150px var(--secondary-pink); }
+    100% { box-shadow: 0 0 50px var(--primary-pink); }
+}
+
+.confetti {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    z-index: 100;
+    pointer-events: none;
+    animation: explode 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes explode {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+    70% { opacity: 1; }
+    100% { 
+        transform: translate(var(--tx), var(--ty)) scale(1.5) rotate(var(--rot)); 
+        opacity: 0; 
+    }
+}
