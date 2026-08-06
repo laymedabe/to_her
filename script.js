@@ -77,17 +77,19 @@ function sayYes() {
         audio.play().catch(e => console.log("Audio autoplay prevented", e));
     }
 
-    // Massive Confetti Explosion
-    const emojis = ['🎉', '💖', '✨', '🥂', '🥳', '💘', '💍'];
+    // Massive Confetti of Big Roses
+    const emojis = ['🌹', '🌺', '🌸', '🌷'];
     for(let i=0; i<100; i++) {
         setTimeout(() => {
             const el = document.createElement('div');
             el.classList.add('confetti');
             el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            el.style.fontSize = (Math.random() * 40 + 40) + 'px'; // Making them huge (40px to 80px)
+            el.style.zIndex = '9999';
             
             // Random explosion directions
             const angle = Math.random() * Math.PI * 2;
-            const velocity = 150 + Math.random() * 800; // explosion distance
+            const velocity = 200 + Math.random() * 1000; // further explosion distance
             const tx = Math.cos(angle) * velocity + 'px';
             const ty = Math.sin(angle) * velocity + 'px';
             const rot = Math.random() * 720 + 'deg';
@@ -100,7 +102,7 @@ function sayYes() {
             
             // cleanup
             setTimeout(() => el.remove(), 2500);
-        }, i * 20); // staggered burst
+        }, i * 15); // slightly faster stagger
     }
     
     // Speed up the background floating hearts drastically
