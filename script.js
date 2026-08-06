@@ -59,7 +59,7 @@ function moveNoButton() {
     yesBtn.style.transform = `scale(${currentScale + 0.1})`;
     
     // Change Yes button text to encourage clicking
-    const prompts = ["Just give up. 🙄", "You literally can't say no.", "Stop trying.", "I'm your only option.", "Resistance is futile.", "Accept your fate."];
+    const prompts = ["Just give up na. 🙄", "You literally can't say no, duh.", "Stop making inarte.", "I'm your only option tbh.", "Don't be so choosy."];
     yesBtn.innerText = prompts[Math.floor(Math.random() * prompts.length)];
 }
 
