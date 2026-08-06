@@ -7,6 +7,22 @@
     --text-color: #5a2a3e;
 }
 
+body.theme-himToHer {
+    --primary-pink: #ff758c;
+    --secondary-pink: #ff7eb3;
+    --dark-pink: #d81b60;
+    --light-pink: #ffe0e9;
+    --text-color: #5a2a3e;
+}
+
+body.theme-herToHim {
+    --primary-pink: #3b82f6;
+    --secondary-pink: #0ea5e9;
+    --dark-pink: #1d4ed8;
+    --light-pink: #dbeafe;
+    --text-color: #1e3a8a;
+}
+
 * {
     margin: 0;
     padding: 0;

@@ -1,22 +1,22 @@
 // Content Data
 const content = {
     himToHer: {
-        s1Title: "Omg, literally just click the button.",
-        s1Text: "Like, I know you've been waiting for me to make a move. It's actually kind of obvious how much you're making papansin. I'm literally just doing you a favor here. Don't make it hard na, just click the button below so we can get this over with. Stop pretending you're not excited tbh.",
+        s1Title: "Stop waiting around na.",
+        s1Text: "Like, I know you've been waiting for me to ask you out. It's actually kind of obvious how much you're making papansin to me. I'm literally just doing you a solid here. Don't make it hard na, just click the button below so we can get this over with. Stop pretending you're not excited.",
         s2Title: "Are we gonna make date or what?",
-        s2Text: "Okay, let's cut the chase. You and me. Date. Food. Vibes. Don't even think about saying no, because honestly? It's so cringe when girls are so pabebe. Just agree na, you know you're super G.",
-        s3Title: "I know right? You're so swerte.",
-        s3Text: "See? I knew you were gonna say yes anyway. You're literally so swerte. Like, who wouldn't want to go out with me? Anyway, I'll like, message you nalang when we're gonna go out. Go pick a cute outfit na, don't embarrass me.",
-        prompts: ["Just give up na. 🙄", "You literally can't say no, duh.", "Stop being so pabebe.", "I'm your best option tbh.", "Don't be so choosy miss."]
+        s2Text: "Okay, let's cut the chase. I'm taking you out. Food. Vibes. Me. Don't even think about saying no, because honestly? It's so cringe when girls act so pabebe. Just agree na, you know you're super G to be seen with me.",
+        s3Title: "You're literally so swerte.",
+        s3Text: "See? I knew you were gonna say yes anyway. Like, who wouldn't want to go out with me? Anyway, I'll just pick you up. Go pick a cute outfit na, try to match my fly. Don't embarrass me.",
+        prompts: ["Just give up na. 🙄", "You literally can't say no, duh.", "Stop being so pabebe.", "I'm the best you'll get tbh.", "Don't be so choosy miss."]
     },
     herToHim: {
-        s1Title: "Omg, literally just click the button.",
-        s1Text: "Like, someone is making so much papansin to you right now. It's actually kind of embarrassing how long it took you to open this. I'm literally rolling my eyes. Don't make it hard na, just click the button below so we can get this over with. The suspense is so fake tbh.",
-        s2Title: "Are we gonna make date or what?",
-        s2Text: "Okay, let's cut the chase. You and me. Date. Food. Vibes. Don't even think about saying no, because honestly? It's so cringe when guys pretend they have better things to do. Just agree na, you know it's a G.",
+        s1Title: "Omg, you're so slow.",
+        s1Text: "Like, I've been giving you so many signs and you're still so clueless. Someone is literally making papansin to you right now. It's actually kind of embarrassing that I have to be the one to do this. Don't make it hard na, click the button before I change my mind.",
+        s2Title: "Are we going out or what?",
+        s2Text: "Okay, let's make this simple since guys are slow. You and me. Date. You're paying. Don't even think about saying no, because honestly? It's so cringe when guys pretend they're busy. Just agree na, you know you want to.",
         s3Title: "I know right? You're so swerte.",
-        s3Text: "See? It's not that hard to not be pabebe. I knew you were gonna say yes anyway. Like, who wouldn't? Anyway, I'll like, message you nalang when we're gonna go out. Go pick a cute outfit na, don't embarrass me.",
-        prompts: ["Just give up na. 🙄", "You literally can't say no, duh.", "Stop making inarte.", "I'm your only option tbh.", "Don't be so choosy boy."]
+        s3Text: "See? It's not that hard to stop being slow. I knew you were gonna say yes anyway. Like, you literally won the lottery today. Anyway, I'll message you where you're bringing me. Don't be late na, I hate waiting.",
+        prompts: ["Just give up boy. 🙄", "You literally can't say no, duh.", "Stop making inarte.", "I'm out of your league tbh.", "Don't be so choosy."]
     }
 };
 
@@ -25,6 +25,10 @@ let currentVersion = 'himToHer';
 function startFlow(version) {
     currentVersion = version;
     
+    // Apply theme distinction
+    document.body.className = ''; // clear any existing classes
+    document.body.classList.add(version === 'himToHer' ? 'theme-himToHer' : 'theme-herToHim');
+
     // Inject text
     const data = content[version];
     document.getElementById('s1-title').innerText = data.s1Title;
