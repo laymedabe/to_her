@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements" id="hearts-container"></div>
+    
+    <main class="container">
+        <div class="glass-card" id="step-1">
+            <div class="icon-wrap">💌</div>
+            <h1>Hey cutie...</h1>
+            <p>I've been wanting to ask you something important 🥺</p>
+            <button class="btn btn-primary" onclick="nextStep()">What is it?</button>
+        </div>
+
+        <div class="glass-card hidden" id="step-2">
+            <div class="icon-wrap heartbeat">💘</div>
+            <h1>Will you go on a date with me?</h1>
+            <p>Promise it'll be fun! ✨</p>
+            <div class="button-group">
+                <button class="btn btn-yes" id="yes-btn" onclick="sayYes()">YES! 🥰</button>
+                <button class="btn btn-no" id="no-btn">No 😢</button>
+            </div>
+        </div>
+
+        <div class="glass-card hidden" id="step-3">
+            <div class="icon-wrap bounce">🎉</div>
+            <h1>Yay! I knew you'd say yes! 💖</h1>
+            <p>Get ready, because you just made me the happiest person ever! 🥰</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
