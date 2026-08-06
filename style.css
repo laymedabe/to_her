@@ -34,15 +34,16 @@ body {
     min-height: 100vh;
     background: linear-gradient(135deg, var(--light-pink) 0%, var(--primary-pink) 100%);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
     position: relative;
     color: var(--text-color);
+    padding: 20px 0;
 }
 
 .background-elements {
-    position: absolute;
+    position: fixed; /* fixed so it stays behind scrolling content */
     top: 0;
     left: 0;
     width: 100%;
@@ -70,6 +71,7 @@ body {
     z-index: 10;
     width: 90%;
     max-width: 500px;
+    margin: auto;
 }
 
 .glass-card {

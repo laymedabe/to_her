@@ -71,6 +71,12 @@ function sayYes() {
         step3.classList.add('celebration-card');
     }, 10);
 
+    // Play music automatically (Allowed because sayYes is a click event)
+    const audio = document.getElementById('bg-audio');
+    if(audio) {
+        audio.play().catch(e => console.log("Audio autoplay prevented", e));
+    }
+
     // Massive Confetti Explosion
     const emojis = ['🎉', '💖', '✨', '🥂', '🥳', '💘', '💍'];
     for(let i=0; i<100; i++) {
