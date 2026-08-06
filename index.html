@@ -13,17 +13,27 @@
     <div class="background-elements" id="hearts-container"></div>
     
     <main class="container">
-        <div class="glass-card" id="step-1">
+        <!-- Step 0: Sender Selection -->
+        <div class="glass-card" id="step-0">
+            <h1>Who is sending this? 💌</h1>
+            <p>Just setting up the vibe...</p>
+            <div class="button-group" style="flex-direction: column; gap: 15px;">
+                <button class="btn btn-primary" onclick="startFlow('himToHer')">I'm a Guy (Him to Her)</button>
+                <button class="btn btn-primary" onclick="startFlow('herToHim')">I'm a Girl (Her to Him)</button>
+            </div>
+        </div>
+
+        <div class="glass-card hidden" id="step-1">
             <img src="cat_sassy.png" alt="Sassy Cat" class="cat-icon">
-            <h1>Omg, literally just click the button.</h1>
-            <p>Like, someone is making so much papansin to you right now. It's actually kind of embarrassing how long it took you to open this. I'm literally rolling my eyes. Don't make it hard na, just click the button below so we can get this over with. The suspense is so fake tbh.</p>
+            <h1 id="s1-title"></h1>
+            <p id="s1-text"></p>
             <button class="btn btn-primary" onclick="nextStep()">Ugh, fine. What ba?</button>
         </div>
 
         <div class="glass-card hidden" id="step-2">
             <img src="cat_cool.png" alt="Cool Cat" class="cat-icon heartbeat">
-            <h1>Are we gonna make date or what?</h1>
-            <p>Okay, let's cut the chase. You and me. Date. Food. Vibes. Don't even think about saying no, because honestly? It's so cringe when people pretend they have better things to do. Just agree na, you know it's a G.</p>
+            <h1 id="s2-title"></h1>
+            <p id="s2-text"></p>
             <div class="button-group">
                 <button class="btn btn-yes" id="yes-btn" onclick="sayYes()">Super G! 🙄</button>
                 <button class="btn btn-no" id="no-btn">Ew, I have bad taste</button>
@@ -32,8 +42,8 @@
 
         <div class="glass-card hidden" id="step-3">
             <img src="cat_smug.png" alt="Smug Cat" class="cat-icon bounce">
-            <h1>I know right? You're so swerte.</h1>
-            <p>See? It's not that hard to not be pabebe. I knew you were gonna say yes anyway. Like, who wouldn't? Anyway, I'll like, message you nalang when we're gonna go out. Go pick a cute outfit na, don't embarrass me.</p>
+            <h1 id="s3-title"></h1>
+            <p id="s3-text"></p>
         </div>
     </main>
 
