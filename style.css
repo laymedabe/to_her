@@ -221,3 +221,34 @@ p {
         opacity: 0; 
     }
 }
+
+/* Meme Celebration Layout */
+.meme-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.meme-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.meme-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.meme-audio {
+    margin: 15px 0;
+    width: 100%;
+    max-width: 300px;
+}
